@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "Primary";
+    src: url("../fonts/jaapokki/jaapokkisubtract-regular.eot");
+    src: url("../fonts/jaapokki/jaapokkisubtract-regular.woff") format("woff"), url("../fonts/jaapokki/jaapokkisubtract-regular.ttf") format("truetype"), url("../fonts/jaapokki/jaapokkisubtract-regular.svg#filename") format("svg");
+}
+
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+/* Header */
+
+.large-header {
+    position: relative;
+    width: 100%;
+    background: #333;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    z-index: 1;
+}
+
+.introAnimation .large-header {
+    margin-bottom: 5em;
+    background: white;
+    background: -webkit-linear-gradient(to bottom, #efedeb, #FFFFFF);
+    background: linear-gradient(to bottom, #efedeb, #FFFFFF);
+}
+.night .introAnimation .large-header {
+    background: #080d17;
+    color: #e9e5d5;
+}
+
+.main-title {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.main-title picture img {
+    width: 60%;
+}
+div.main-title h3 {
+    font-family: 'Primary', Moderne Sans, sans-serif;
+    text-transform: uppercase;
+    color: #031926;
+    font-size: 4.2em;
+    margin-bottom: 3px;
+}
+div.main-title p {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.6em;
+    color: #122C34;
+    padding: 0px 0px 10px 10px;
+    font-weight: 600;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+.main-title .thin {
+    font-weight: 200;
+}
+@media only screen and (max-width: 85em) {
+    .main-title {
+        width:80%;
+    }
+
+    .main-title picture img {
+        width: 45%;
+    }
+
+    div.main-title h3 {
+        font-size: 3em;
+        margin: 15px 0 15px 0;
+    }
+
+    div.main-title p {
+        
+    letter-spacing: 0.2em;
+    }
+    
+    .introAnimation .main-title {
+        font-size: 1em;
+    }
+}
+
+
+@media only screen and (max-width: 35em) {
+
+    .main-title picture img {
+        width: 65%;
+    }
+}
+
