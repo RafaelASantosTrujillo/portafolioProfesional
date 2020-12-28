@@ -276,7 +276,7 @@ p.ref {
     font-family: 'Muli', sans-serif;
     font-weight: 200;
     display: block;
-    padding: 1em 0 1.5em;
+    /* padding: 1em 0 1.5em;  lo comento porque me rompe las flechas del carrusel*/
     font-size: 2rem;
     color: #333333;
     line-height: 1.4;
@@ -1352,6 +1352,83 @@ Timeline Components
 .cd-horizontal-timeline .events-content p {
     line-height: 1.6;
 }
+
+.card{
+    padding-top: 10px;
+    height: 600px;
+    background-color: transparent;
+    text-align: center;
+}
+.card-img-top{
+    margin: auto;
+    width: 95%;
+    height: 250px;
+}
+.card-body{
+    height: 200px;
+    text-align: center;
+}
+.card-title{  
+}
+.card-text{
+}
+.btn-primary{
+   background-color: #43CEA2!important;
+   border-color: #43CEA2!important;
+}
+.btn-primary:hover{
+    background-color: #136e51!important;
+    border-color: #136e51!important;
+ }
+
+.carousel-indicators li{
+    position: relative;
+    -ms-flex: 0 1 auto;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    background-color: transparent;
+    border: 2px solid #43CEA2!important;
+}
+
+.carousel-indicators .active {
+    background-color: #43CEA2!important;
+} 
+.carousel-control-prev-icon{
+    background-image: url("../img/flecha-izquierda.png");
+}
+.carousel-control-next-icon {
+    background-image: url("../img/flecha-derecha.png");
+} 
+
+svg,rect{
+    top:0;
+    left:0;
+    width: 100%;
+    height: 600px;
+    fill: transparent;
+}
+rect{
+    stroke: #43CEA2;
+    stroke-width: 10;
+    stroke-dasharray: 600;
+    animation: animate 6s linear infinite;
+} 
+
+ @keyframes animate{
+    0% {
+        stroke-dashoffset: 6000;
+      }
+    100% {
+        stroke-dashoffset: 0;
+    }
+} 
 
 @media only screen and (min-width: 768px) {
     .cd-horizontal-timeline .events-content h2 {
