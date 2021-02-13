@@ -1,0 +1,30 @@
+.nav-invisible{
+    visibility: hidden;
+}
+.scroll-invisible{
+    overflow: hidden;
+}
+.modal-container-invisible{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.50);
+    position: fixed;
+    z-index: 4;
+    visibility: hidden;
+}
+.modal-container-visible{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.50);
+    position: fixed;
+    z-index: 4;
+    visibility: visible;
+    overflow: hidden;
+    transition: 5s;
+}

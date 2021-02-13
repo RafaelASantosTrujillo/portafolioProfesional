@@ -353,6 +353,7 @@
 }
 
 .navigation__list {
+	margin-top: 40px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -369,7 +370,7 @@
 .navigation__link:link,
 .navigation__link:visited {
 	display: inline-block;
-	font-size: 3rem;
+	font-size: 30px;
 	font-weight: 300;
 	padding: 1rem 2rem;
 	color: #fff;

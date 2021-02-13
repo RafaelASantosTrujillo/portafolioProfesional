@@ -21,6 +21,7 @@
         crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="css/photoAnimation.css" />
+    <link rel="stylesheet" type="text/css" href="css/modal.css" />
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/timeline.css" />
     <link rel="stylesheet" type="text/css" href="css/certificates.css" />
@@ -39,6 +40,9 @@
 </head>
 
 <body id="fullpage" class="full">
+    <div class="modal-container-invisible">
+
+    </div>
 	<div class="navigation hidden-md hidden-lg hidden-xl">
 		<input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
 		<label for="navi-toggle" class="navigation__button">
@@ -139,7 +143,7 @@
                         <div class="water"></div>
                     </div>
 				</div>
-				<div style="width:400px;height:400px;border-radius: 50%;" <div id="section07">
+				<div style="width:100%;height:400px;border-radius: 50%;" id="section07">
 					<a data-scroll href="#about">
 						<span></span>
 						<span></span>
@@ -151,7 +155,7 @@
     </div>
     <!-- About me -->
     <div class="container-about-me" data-animate-up="ha-header-hide">
-        <div class="container1">
+        <div class="container1" id="about">
             <div id="fotito" class="rast-photo-invisible">
                 <svg
                     class="esbieg"
@@ -206,13 +210,14 @@
                     />
                 </svg>
                 <img
+                    width="300px"
                     id="photoRafael"
                     src="img/perfilRAST.png"
                     alt="Rafael Santos"
                     class=""
                 />
             </div>
-            <div class="rast-header col-xs-12 col-sm-offset-1 col-sm-7" id="about" data-animate-down="ha-header-small" data-animate-up="ha-header-hide">
+            <div class="rast-header col-xs-12 col-sm-offset-1 col-sm-7" data-animate-down="ha-header-small" data-animate-up="ha-header-hide">
 					<h1 class="text-color">Acerca de mi</h1>
 					<span class="text-color rast-aboutMe">
 						Soy Ingeniero en sistemas computacionales, egresado del Tecnológico Nacional de México campus Iguala, me dedíco al desarrollo web full stack. Mi tecnología favorita es javascript.
@@ -231,7 +236,7 @@
 				</div>
         </div>        
     </div>
-    
+
 	<div class="container" style="background: transparent;">
 		<!-- <section>
 			<div class="row">
@@ -378,54 +383,56 @@
         </section>
 
         <!--Seccion de certificados-->
+        
         <div id="certificates" class="container-certificates" >
+            
             <div class="mouseover-bg">
             </div>
             <h1 class="text-color rast-title-experience" style="text-align: center;">Certificados</h1>
             <ul class="honeycomb" lang="es">
-                <li class="honeycomb-cell">
+                <li class="honeycomb-cell" id="certificate1">
                     <img
                         class="honeycomb-cell__image"
-                        src="img/perfilRAST.png"
+                        src="certif/certifEnglish.png"
                     />
                     <div class="honeycomb-cell__title">
-                        En construcción
+                        Inglés
                     </div>
                 </li>
                 <li class="honeycomb-cell">
                     <img
                         class="honeycomb-cell__image"
-                        src="https://source.unsplash.com/random/2"
+                        src="certif/certifJavaScript.png"
                     />
                     <div class="honeycomb-cell__title">
-                        En construcción
+                        JavaScript
                     </div>
                 </li>
                 <li class="honeycomb-cell">
                     <img
                         class="honeycomb-cell__image"
-                        src="https://source.unsplash.com/random/3"
+                        src="certif/certifNode.png"
                     />
                     <div class="honeycomb-cell__title">
-                        En construcción
+                        NODE
                     </div>
                 </li>
                 <li class="honeycomb-cell">
                     <img
                         class="honeycomb-cell__image"
-                        src="https://source.unsplash.com/random/4"
+                        src="certif/certifGitGitHub.png"
                     />
                     <div class="honeycomb-cell__title">
-                        En construcción
+                        Git y GitHub
                     </div>
                 </li>
-                <li class="honeycomb-cell">
+                <li class="honeycomb-cell honeycomb__placeholder" style="cursor: inherit;"></li> 
+                <!-- <li class="honeycomb-cell">
                     <img
                         class="honeycomb-cell__image"
                         src="https://source.unsplash.com/random/5"
                     />
                     <div class="honeycomb-cell__title">
-                        <!-- Antireflectivo<small>No vidrio</small> -->
                         En construcción
                     </div>
                 </li>
@@ -456,7 +463,7 @@
                         En construcción
                     </div>
                 </li>
-                <li class="honeycomb-cell honeycomb__placeholder" style="cursor: inherit;"></li>
+                <li class="honeycomb-cell honeycomb__placeholder" style="cursor: inherit;"></li> -->
             </ul>
             
         </div>
@@ -471,27 +478,37 @@
         </section> -->
 
 		<section class="section-contact" style="margin-top: 30px;">
-				<div class="rast-header" style="background: transparent;">
-                    <h1 id="contact" class="text-color">Contacto</h1>
-                    <h3 class="text-color">En construcción</h3>
-				</div>
+			<div class="rast-header" style="background: transparent;">
+                <h1 id="contact" class="text-color">Contacto</h1>
+                <form action="https://www.formbackend.com/f/256a1e507591a6fe" method="POST" class="form-container">
+                    <label class="label-form" for="name">Nombre:</label>
+                    <input class="input-form" type="text" name="name" placeholder="Nombre completo..." required>    
+                    <label class="label-form" for="email">Correo:</label>
+                    <input class="input-form" type="email" name="email" placeholder="Correo electrónico..." required>
 
-				<form id="contactForm" class="form-horizontal" role="form" method="POST">
-					
-				</form>
-				<!-- <div class="col-xs-12 col-sm-6">
-				MAP
-			</div> -->
+                    <label class="label-form" for="mensaje">Mensaje:</label>
+                    <!-- <input class="input-form" type="textarea" rows="10" name="mensaje" required> -->
+                    <textarea class="input-form" name="mensaje" rows="10" cols="40" required placeholder="Escribe aquí tu mensaje..."></textarea>
+
+                    <button class="button-form" type="submit">Enviar</button>
+                        
+                </form>
+			</div>
 		</section>
 	</div>
 	<div class="row">
-		<div class="col-xs-4 col-xs-offset-4">
+        <p class="ref text-color" style="margin: auto;">© Todos los derechos reservados - 
+            <strong>
+                <a class="designed text-color" href="#about" data-scroll>Rafael Santos 2020-2021</a>
+            </strong>
+        </p>
+		<!-- <div class="col-xs-4 col-xs-offset-4">
 			<p class="ref text-color">© Todos los derechos reservados - 
 				<strong>
 					<a class="designed text-color" href="#about" data-scroll>Rafael Santos 2020-2021</a>
 				</strong>
 			</p>
-		</div>
+		</div> -->
 	</div>
     
 		<!-- Bootstrap JS -->
@@ -597,6 +614,24 @@
 			})();
 		</script>
     </div>
+    <script>
+        /*Script for the modals*/
+        var certificate1 = document.querySelector("#certificate1")
+        var navbar = document.querySelector(".ha-header-perspective>div")
+        var modal = document.querySelector(".modal-container-invisible")
+        modal.addEventListener("click",function(){
+            modal.classList.remove("modal-container-visible")
+            modal.classList.add("modal-container-invisible")
+            document.body.classList.remove("scroll-invisible")
+            navbar.classList.remove("nav-invisible")
+        })
+        certificate1.addEventListener("click",function(){
+            document.body.classList.add("scroll-invisible")
+            navbar.classList.add("nav-invisible")
+            modal.classList.remove("modal-container-invisible")
+            modal.classList.add("modal-container-visible")
+        })
+    </script>
     <script>
         var imagen = document.querySelector("#fotito");
         var photo = document.querySelector("#photoRafael");

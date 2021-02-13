@@ -3,13 +3,13 @@
 #185a9d
 #031926*/
 
-@font-face {
+/* @font-face {
     font-family: "Primary";
     src: url("../fonts/jaapokki/jaapokkisubtract-regular.eot");
     src: url("../fonts/jaapokki/jaapokkisubtract-regular.woff") format("woff"), url("../fonts/jaapokki/jaapokkisubtract-regular.ttf") format("truetype"), url("../fonts/jaapokki/jaapokkisubtract-regular.svg#filename") format("svg");
 }
 
-@import url('https://fonts.googleapis.com/css?family=Muli:200,300,600,700');
+@import url('https://fonts.googleapis.com/css?family=Muli:200,300,600,700'); */
 
 body {
     background: #fff;
@@ -18,6 +18,7 @@ body {
     line-height: 1.25;
     font-family: 'Muli', sans-serif !important;
     font-weight: 400;
+    overflow-x: hidden; 
 }
 
 html,
@@ -1034,7 +1035,98 @@ rect{
         stroke-dashoffset: 0;
     }
 } 
+.row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.container-certificates{
+        width: 100%;
+        height: 670px;
+        background-color: transparent;
+        margin: auto;
+        z-index: -2;
+        overflow: hidden;
+        transition: all 0.2s linear;
+}
+.mouseover-bg {
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    background: linear-gradient(
+        45deg,
+        #e8f74d,
+        #ff6600d9,
+        #00ff66,
+        #13ff13,
+        #ad27ad,
+        #bd2681,
+        #6512b9,
+        #ff3300de,
+        #5aabde
+    );
+    background-size: 400%;
+    animation: glower 20s linear infinite;
+    filter: blur(40px);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    z-index: -1;
+    
+}
+
+@keyframes glower {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+/*TERMINA CERTIFICADOS---------------------------------------------------*/
+
+/*INICIA FORMULARIO*/
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+}
+.label-form{
+    margin-top: 20px;
+    align-self: flex-start;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+/* .input-form{
+    border: 1px solid black!important;
+    align-self: center;
+    width: 100%!important;
+    border-radius: 5px;
+}
+.button-form{
+    margin-top: 20px;
+    width: 120px;
+    border:solid .5px black;
+    border-radius: 5px;
+    height: 40px;
+} */
 @media only screen and (max-width: 500px) {
+    .container-certificates{
+        width: 100%;
+        height: 1050px;
+        background-color: transparent;
+        margin: auto;
+        z-index: -2;
+        overflow: hidden;
+        transition: all 0.2s linear;
+}
     svg,rect{
         top:0;
         left:0;
@@ -1174,7 +1266,7 @@ a.designed:hover {
 }
 
 input {
-    color: #FFF;
+    color: Black;
     display: block;
     font-weight: 200 !important;
     background-color: transparent;
@@ -1183,12 +1275,30 @@ input {
     padding: 0.5em 1.2em;
     outline: none;
     text-decoration: none;
-    text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 200;
     border-radius: 2px;
     font-size: 110%;
-    border: 2px solid transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.night input {
+    color: white;
+    display: block;
+    font-weight: 200 !important;
+    background-color: transparent;
+    display: inline-block;
+    margin: 0.35em 0.1em;
+    padding: 0.5em 1.2em;
+    outline: none;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 200;
+    border-radius: 2px;
+    font-size: 110%;
+    border: 1px solid white;
+    border-radius: 5px;
 }
 
 input:hover {
@@ -1199,6 +1309,79 @@ input:hover {
     color: #43cea2;
     font-weight: 200;
     border-color: #43cea2;
+}
+textarea{
+    color: black;
+    display: block;
+    font-weight: 200 !important;
+    background-color: transparent;
+    display: inline-block;
+    margin: 0.35em 0.1em;
+    padding: 0.5em 1.2em;
+    outline: none;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 200;
+    border-radius: 2px;
+    font-size: 110%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.night textarea{
+    color: white;
+    display: block;
+    font-weight: 200 !important;
+    background-color: transparent;
+    display: inline-block;
+    margin: 0.35em 0.1em;
+    padding: 0.5em 1.2em;
+    outline: none;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 200;
+    border-radius: 2px;
+    font-size: 110%;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+::placeholder{
+    color:white;
+}
+textarea:hover{
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+    text-decoration: none;
+    color: #43cea2;
+    font-weight: 200;
+    border-color: #43cea2;
+}
+
+.button-form{
+    background-color: rgba(255,255,255,0.1);
+    margin-top: 20px;
+    width: 120px;
+    border:solid .5px black;
+    border-radius: 5px;
+    height: 40px;
+}
+.night .button-form{
+    background-color: rgba(255,255,255,0.1);
+    margin-top: 20px;
+    width: 120px;
+    border:solid .5px white;
+    border-radius: 5px;
+    height: 40px;
+    color: white;
+}
+.button-form:hover{
+    background-image: linear-gradient(#73e2bf,#208565);
+    margin-top: 20px;
+    width: 120px;
+    border:solid .5px black;
+    border-radius: 5px;
+    height: 40px;
+    font-size: bold;
 }
 
 .svg-container {
@@ -1251,56 +1434,3 @@ input:hover {
   ::-moz-selection { */
     /* background: #00ff7f; Gecko Browsers
   } */
-.row{
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-.container-certificates{
-        width: 100%;
-        height: 670px;
-        background-color: transparent;
-        margin: auto;
-        z-index: -2;
-        overflow: hidden;
-        transition: all 0.2s linear;
-}
-.mouseover-bg {
-    overflow: hidden;
-    display: block;
-    position: absolute;
-    opacity: 0;
-    background: linear-gradient(
-        45deg,
-        #e8f74d,
-        #ff6600d9,
-        #00ff66,
-        #13ff13,
-        #ad27ad,
-        #bd2681,
-        #6512b9,
-        #ff3300de,
-        #5aabde
-    );
-    background-size: 400%;
-    animation: glower 20s linear infinite;
-    filter: blur(40px);
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    z-index: -1;
-    
-}
-
-@keyframes glower {
-    0% {
-        background-position: 0 0;
-    }
-
-    50% {
-        background-position: 400% 0;
-    }
-
-    100% {
-        background-position: 0 0;
-    }
-}
