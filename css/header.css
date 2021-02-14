@@ -273,6 +273,7 @@
 
 .navigation__checkbox {
 	display: none;
+	visibility: hidden;
 }
 
 .navigation__button {
