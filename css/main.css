@@ -976,7 +976,7 @@ a.unsplash:hover {
     width: 450px;
     height: 300px;
     border-radius: 1px;
-    background-image: url("/gifs/gifGetMatchaNight.gif");
+    background-image: url(/gifs/gifGetMatchaNight.gif);
     background-repeat: no-repeat;
     background-size: 450px;
 }
@@ -985,7 +985,7 @@ a.unsplash:hover {
     width: 450px;
     height: 300px;
     border-radius: 10px;
-    background-image: url("/gifs/gifSpotify.gif");
+    background-image: url(gifs/gifSpotify.gif);
     background-repeat: no-repeat;
     background-size: 450px;
 }
@@ -994,7 +994,7 @@ a.unsplash:hover {
     width: 450px;
     height: 300px;
     border-radius: 10px;
-    background-image: url("/gifs/gifSpotifyNight.gif");
+    background-image: url(gifs/gifSpotifyNight.gif);
     background-repeat: no-repeat;
     background-size: 450px;
 }
@@ -1159,16 +1159,16 @@ rect{
         width: 350px;
         height: 220px;
         border-radius: 1px;
-        background-image: url("/gifs/gifGetMatcha.gif");
+        background-image: url(gifs/gifGetMatcha.gif);
         background-repeat: no-repeat;
-        background-size: 450px;
+        background-size: 350px;
     }
     .night .card-img-top1{
         margin: auto;
         width: 350px;
         height: 200px;
         border-radius: 1px;
-        background-image: url("/gifs/gifGetMatchaNight.gif");
+        background-image: url(gifs/gifGetMatchaNight.gif);
         background-repeat: no-repeat;
         background-size: 350px;
     }
@@ -1177,16 +1177,16 @@ rect{
         width: 350px;
         height: 200px;
         border-radius: 10px;
-        background-image: url("/gifs/gifSpotify.gif");
+        background-image: url(/gifs/gifSpotify.gif);
         background-repeat: no-repeat;
-        background-size: 450px;
+        background-size: 350px;
     }
     .night .card-img-top2{
         margin: auto;
         width: 350px;
         height: 200px;
         border-radius: 10px;
-        background-image: url("/gifs/gifSpotifyNight.gif");
+        background-image: url(gifs/gifSpotifyNight.gif);
         background-repeat: no-repeat;
         background-size: 350px;
     }
@@ -1228,7 +1228,7 @@ rect{
         width: 250px;
         height: 150px;
         border-radius: 1px;
-        background-image: url("/gifs/gifGetMatcha.gif");
+        background-image: url(/gifs/gifGetMatcha.gif);
         background-repeat: no-repeat;
         background-size: 250px;
     }
@@ -1237,7 +1237,7 @@ rect{
         width: 250px;
         height: 150px;
         border-radius: 1px;
-        background-image: url("/gifs/gifGetMatchaNight.gif");
+        background-image: url(/gifs/gifGetMatchaNight.gif);
         background-repeat: no-repeat;
         background-size: 250px;
     }
@@ -1246,7 +1246,7 @@ rect{
         width: 250px;
         height: 150px;
         border-radius: 10px;
-        background-image: url("/gifs/gifSpotify.gif");
+        background-image: url(/gifs/gifSpotify.gif);
         background-repeat: no-repeat;
         background-size: 250px;
     }
@@ -1255,7 +1255,7 @@ rect{
         width: 250px;
         height: 150px;
         border-radius: 10px;
-        background-image: url("/gifs/gifSpotifyNight.gif");
+        background-image: url(/gifs/gifSpotifyNight.gif);
         background-repeat: no-repeat;
         background-size: 250px;
     }

@@ -651,7 +651,6 @@
                 if (visible === false) {
                     var elements = document.querySelectorAll(".no-class");
                     var arrayOfElements = [...elements]
-                    console.log(arrayOfElements)
                     for (var i=0;i<arrayOfElements.length;i++){
                         if(arrayOfElements[i].nodeName == "ellipse"){
                             arrayOfElements[i].classList.remove("no-class")
@@ -662,7 +661,6 @@
                         arrayOfElements[i].classList.add("line")
                     }
                     
-                    console.log("Si es visible");
                     photo.className = "animation-img";
                     imagen.className = "rast-photo";
                     esevg.className = "rast-photo-line";
@@ -681,7 +679,6 @@
                         arrayOfElements[i].classList.remove("line")
                         arrayOfElements[i].classList.add("no-class")
                     }
-                    console.log("No es visible");
                     photo.className = "";
                     imagen.className = "rast-photo-invisible";
                     esevg.className = "";
