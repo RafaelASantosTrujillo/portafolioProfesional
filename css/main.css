@@ -967,7 +967,7 @@ a.unsplash:hover {
     width: 450px;
     height: 320px;
     border-radius: 1px;
-    background-image: url("/gifs/gifGetMatcha.gif");
+    background-image: url(/gifs/gifGetMatcha.gif);
     background-repeat: no-repeat;
     background-size: 450px;
 }
@@ -976,7 +976,7 @@ a.unsplash:hover {
     width: 450px;
     height: 300px;
     border-radius: 1px;
-    background-image: url("/gifs/gifGetMatchaNight.gif");
+    background-image: url(/gifs/gifGetMatchaNight.gif);
     background-repeat: no-repeat;
     background-size: 450px;
 }
@@ -1154,7 +1154,7 @@ rect{
 } */
 
 @media (max-width: 500px) {
-    .card-img-top1{
+    /* .card-img-top1{
         margin: auto;
         width: 350px;
         height: 220px;
@@ -1189,7 +1189,7 @@ rect{
         background-image: url("/gifs/gifSpotifyNight.gif");
         background-repeat: no-repeat;
         background-size: 350px;
-    }
+    } */
     .container-certificates{
         width: 100%;
         height: 1050px;
@@ -1223,7 +1223,7 @@ rect{
     } 
 }
 @media (max-width:400px){
-    .card-img-top1{
+    /* .card-img-top1{
         margin: auto;
         width: 250px;
         height: 150px;
@@ -1258,7 +1258,7 @@ rect{
         background-image: url("/gifs/gifSpotifyNight.gif");
         background-repeat: no-repeat;
         background-size: 250px;
-    }
+    } */
 }
 @media only screen and (max-width: 768px) {
     .card-title{
