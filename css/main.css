@@ -985,7 +985,7 @@ a.unsplash:hover {
     width: 450px;
     height: 300px;
     border-radius: 10px;
-    background-image: url("/gifs/gifSpotify.gif");
+    background-image: url("https://raw.githubusercontent.com/RafaelASantosTrujillo/portafolioProfesional/master/gifs/gifSpotify.gif");
     background-repeat: no-repeat;
     background-size: 450px;
 }
@@ -994,7 +994,7 @@ a.unsplash:hover {
     width: 450px;
     height: 300px;
     border-radius: 10px;
-    background-image: url("/gifs/gifSpotifyNight.gif");
+    background-image: url("https://raw.githubusercontent.com/RafaelASantosTrujillo/portafolioProfesional/master/gifs/gifSpotifyNight.gif");
     background-repeat: no-repeat;
     background-size: 450px;
 }
