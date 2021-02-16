@@ -1159,7 +1159,7 @@ rect{
         width: 350px;
         height: 220px;
         border-radius: 1px;
-        background-image: url("../gifs/gifGetMatcha.gif");
+        background-image: url("/gifs/gifGetMatcha.gif");
         background-repeat: no-repeat;
         background-size: 450px;
     }
@@ -1168,7 +1168,7 @@ rect{
         width: 350px;
         height: 200px;
         border-radius: 1px;
-        background-image: url("../gifs/gifGetMatchaNight.gif");
+        background-image: url("/gifs/gifGetMatchaNight.gif");
         background-repeat: no-repeat;
         background-size: 350px;
     }
@@ -1177,7 +1177,7 @@ rect{
         width: 350px;
         height: 200px;
         border-radius: 10px;
-        background-image: url("../gifs/gifSpotify.gif");
+        background-image: url("/gifs/gifSpotify.gif");
         background-repeat: no-repeat;
         background-size: 450px;
     }
@@ -1186,7 +1186,7 @@ rect{
         width: 350px;
         height: 200px;
         border-radius: 10px;
-        background-image: url("../gifs/gifSpotifyNight.gif");
+        background-image: url("/gifs/gifSpotifyNight.gif");
         background-repeat: no-repeat;
         background-size: 350px;
     }
@@ -1226,36 +1226,36 @@ rect{
     .card-img-top1{
         margin: auto;
         width: 250px;
-        height: 120px;
+        height: 150px;
         border-radius: 1px;
-        background-image: url("../gifs/gifGetMatcha.gif");
+        background-image: url("/gifs/gifGetMatcha.gif");
         background-repeat: no-repeat;
         background-size: 250px;
     }
     .night .card-img-top1{
         margin: auto;
         width: 250px;
-        height: 120px;
+        height: 150px;
         border-radius: 1px;
-        background-image: url("../gifs/gifGetMatchaNight.gif");
+        background-image: url("/gifs/gifGetMatchaNight.gif");
         background-repeat: no-repeat;
         background-size: 250px;
     }
     .card-img-top2{
         margin: auto;
         width: 250px;
-        height: 120px;
+        height: 150px;
         border-radius: 10px;
-        background-image: url("../gifs/gifSpotify.gif");
+        background-image: url("/gifs/gifSpotify.gif");
         background-repeat: no-repeat;
         background-size: 250px;
     }
     .night .card-img-top2{
         margin: auto;
         width: 250px;
-        height: 120px;
+        height: 150px;
         border-radius: 10px;
-        background-image: url("../gifs/gifSpotifyNight.gif");
+        background-image: url("/gifs/gifSpotifyNight.gif");
         background-repeat: no-repeat;
         background-size: 250px;
     }
