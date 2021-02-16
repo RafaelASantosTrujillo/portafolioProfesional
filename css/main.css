@@ -967,7 +967,7 @@ a.unsplash:hover {
     width: 450px;
     height: 320px;
     border-radius: 1px;
-    background-image: url("../gifs/gifGetMatcha.gif");
+    background-image: url(../gifs/gifGetMatcha.gif);
     background-repeat: no-repeat;
     background-size: 450px;
 }
