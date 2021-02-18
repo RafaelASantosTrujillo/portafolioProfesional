@@ -41,6 +41,7 @@
 
 <body id="fullpage" class="full">
     <div class="modal-container-invisible"></div>
+
 	<div class="navigation hidden-md hidden-lg hidden-xl">
 		<input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
 		<label for="navi-toggle" class="navigation__button">
@@ -51,23 +52,23 @@
 		<nav class="navigation__nav">
 			<ul class="navigation__list">
 				<li class="navigation__item">
-					<a href="#about" class="navigation__link">
+					<a href="#about" class="navigation__link" onclick="closeNavigation()">
 						Acerca de mi</a>
 				</li>
 				<li class="navigation__item">
-					<a href="#work" class="navigation__link">
-						Esperiencia</a>
+					<a href="#work" class="navigation__link" onclick="closeNavigation()">
+						Experiencia</a>
 				</li>
 				<li class="navigation__item">
-					<a href="#portfolio" class="navigation__link">
+					<a href="#portfolio" class="navigation__link" onclick="closeNavigation()">
 						Proyectos</a>
                 </li>
                 <li class="navigation__item">
-					<a href="#certificates" class="navigation__link">
+					<a href="#certificates" class="navigation__link" onclick="closeNavigation()">
 						Certificados</a>
 				</li>
 				<li class="navigation__item">
-					<a href="#contact" class="navigation__link">
+					<a href="#contact" class="navigation__link" onclick="closeNavigation()">
 						Contacto</a>
 				</li>
 			</ul>
@@ -526,6 +527,10 @@
 
 
 		<script>
+
+            function closeNavigation(){
+                document.getElementById('navi-toggle').checked = false;
+            }
 
 			var contactform = document.getElementById('contactForm');
 			contactform.setAttribute('action', 'https://formspree.io/' + 'rast' + '@' + 'rasttasher' + '.' + 'com');
