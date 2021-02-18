@@ -42,7 +42,7 @@
 <body id="fullpage" class="full">
     <div class="modal-container-invisible"></div>
 
-	<div class="navigation hidden-md hidden-lg hidden-xl">
+	<div id="navigationR" class="navigation hidden-md hidden-lg hidden-xl">
 		<input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
 		<label for="navi-toggle" class="navigation__button">
 			<span class="navigation__icon">&nbsp;</span>
@@ -620,18 +620,22 @@
         /*Script for the modals*/
         var certificate1 = document.querySelector("#certificate1")
         var navbar = document.querySelector(".ha-header-perspective>div")
+        var navigationButton = document.querySelector("#navigationR")
         var modal = document.querySelector(".modal-container-invisible")
         modal.addEventListener("click",function(){
             modal.classList.remove("modal-container-visible")
             modal.classList.add("modal-container-invisible")
             document.body.classList.remove("scroll-invisible")
             navbar.classList.remove("nav-invisible")
+            navigationButton.classList.remove("nav-invisible")
         })
         certificate1.addEventListener("click",function(){
             document.body.classList.add("scroll-invisible")
             navbar.classList.add("nav-invisible")
+            // navigationButton.add("nav-invisible")
             modal.classList.remove("modal-container-invisible")
             modal.classList.add("modal-container-visible")
+            navigationButton.classList.add("nav-invisible")
         })
     </script>
     <script>
