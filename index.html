@@ -40,9 +40,7 @@
 </head>
 
 <body id="fullpage" class="full">
-    <div class="modal-container-invisible">
-
-    </div>
+    <div class="modal-container-invisible"></div>
 	<div class="navigation hidden-md hidden-lg hidden-xl">
 		<input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
 		<label for="navi-toggle" class="navigation__button">
@@ -75,9 +73,6 @@
 			</ul>
 		</nav>
 	</div>
-
-
-
 
 	<header id="ha-header" class="ha-header ha-header-hide">
 		<div class="ha-header-perspective">
@@ -154,7 +149,7 @@
 		</div>
     </div>
     <!-- About me -->
-    <div class="container-about-me" data-animate-up="ha-header-hide">
+    <div class="container-about-me" id="about">
         <div class="container1" id="about">
             <div id="fotito" class="rast-photo-invisible">
                 <svg
@@ -639,11 +634,18 @@
         var photo = document.querySelector("#photoRafael");
         var esevg = document.querySelector("#Lineas");
         var visible = false;
+        var headerNav = document.querySelector("#ha-header")
         window.onscroll = function () {
             var posTopView = window.scrollY;
+            console.log(posTopView)
             var posButView = posTopView + window.innerHeight;
             var elemTop = imagen.offsetTop;
             var elemBottom = elemTop + imagen.offsetHeight;
+            if(posTopView > 460){
+                headerNav.classList.remove("ha-header-hide")
+            }else if(posTopView < 200){
+                headerNav.classList.add("ha-header-hide")
+            }
             if (
                 (elemBottom < posButView && elemBottom > posTopView) ||
                 (elemTop > posTopView && elemTop < posButView)
