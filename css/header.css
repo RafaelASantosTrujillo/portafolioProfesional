@@ -300,7 +300,9 @@
 @media only screen and (max-width: 37.5em) {
 	.navigation__button {
 		top: 3rem;
-		right: 3rem;
+		right: .5rem;
+		height: 5rem;
+		width: 5rem;
 	}
 }
 
@@ -337,7 +339,9 @@
 @media only screen and (max-width: 37.5em) {
 	.navigation__background {
 		top: 3.5rem;
-		right: 3.5rem;
+		right: 1rem;
+		height: 4rem;
+		width: 4rem;
 	}
 }
 
@@ -455,4 +459,10 @@
 .navigation__checkbox:checked+.navigation__button .navigation__icon::after {
 	top: 0;
 	transform: rotate(-135deg);
+}
+@media (max-width:600px){
+	.navigation__icon {
+		margin-top: 2.5rem;
+		position: relative;
+	}
 }
