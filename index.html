@@ -40,7 +40,26 @@
 </head>
 
 <body id="fullpage" class="full">
-    <div class="modal-container-invisible"></div>
+    <div id="certifEnglish" class="modal-container-invisible">
+        <div>
+            <h1>Hola mundo English</h1>
+        </div>
+    </div>
+    <div id="certifJavaScript" class="modal-container-invisible">
+        <div>
+            <h1>Hola mundo javascript</h1>
+        </div>
+    </div>
+    <div id="certifNode" class="modal-container-invisible">
+        <div>
+            <h1>Hola mundo node</h1>
+        </div>
+    </div>
+    <div id="certifGitGitHub" class="modal-container-invisible">
+        <div>
+            <h1>Hola mundo github</h1>
+        </div>
+    </div>
 
 	<div id="navigationR" class="navigation hidden-md hidden-lg hidden-xl">
 		<input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
@@ -388,7 +407,7 @@
             </div>
             <h1 class="text-color rast-title-experience" style="text-align: center;">Certificados</h1>
             <ul class="honeycomb" lang="es">
-                <li class="honeycomb-cell" id="certificate1">
+                <li class="honeycomb-cell" id="certificateEnglish">
                     <img
                         class="honeycomb-cell__image"
                         src="certif/certifEnglish.png"
@@ -397,7 +416,7 @@
                         Inglés
                     </div>
                 </li>
-                <li class="honeycomb-cell">
+                <li class="honeycomb-cell" id="certificateJavaScript">
                     <img
                         class="honeycomb-cell__image"
                         src="certif/certifJavaScript.png"
@@ -406,7 +425,7 @@
                         JavaScript
                     </div>
                 </li>
-                <li class="honeycomb-cell">
+                <li class="honeycomb-cell" id="certificateNode">
                     <img
                         class="honeycomb-cell__image"
                         src="certif/certifNode.png"
@@ -415,7 +434,7 @@
                         NODE
                     </div>
                 </li>
-                <li class="honeycomb-cell">
+                <li class="honeycomb-cell" id="certificateGitGitHub">
                     <img
                         class="honeycomb-cell__image"
                         src="certif/certifGitGitHub.png"
@@ -618,23 +637,73 @@
     </div>
     <script>
         /*Script for the modals*/
-        var certificate1 = document.querySelector("#certificate1")
+        var certificateEnglish= document.querySelector("#certificateEnglish")
         var navbar = document.querySelector(".ha-header-perspective>div")
         var navigationButton = document.querySelector("#navigationR")
-        var modal = document.querySelector(".modal-container-invisible")
-        modal.addEventListener("click",function(){
-            modal.classList.remove("modal-container-visible")
-            modal.classList.add("modal-container-invisible")
+        var modalEnglish = document.querySelector("#certifEnglish")
+        modalEnglish.addEventListener("click",function(){
+            modalEnglish.classList.remove("modal-container-visible")
+            modalEnglish.classList.add("modal-container-invisible")
             document.body.classList.remove("scroll-invisible")
             navbar.classList.remove("nav-invisible")
             navigationButton.classList.remove("nav-invisible")
         })
-        certificate1.addEventListener("click",function(){
+        certificateEnglish.addEventListener("click",function(){
             document.body.classList.add("scroll-invisible")
             navbar.classList.add("nav-invisible")
-            // navigationButton.add("nav-invisible")
-            modal.classList.remove("modal-container-invisible")
-            modal.classList.add("modal-container-visible")
+            modalEnglish.classList.remove("modal-container-invisible")
+            modalEnglish.classList.add("modal-container-visible")
+            navigationButton.classList.add("nav-invisible")
+        })
+
+        var certificateJavaScript= document.querySelector("#certificateJavaScript")
+        var modalJavaScript = document.querySelector("#certifJavaScript")
+        modalJavaScript.addEventListener("click",function(){
+            modalJavaScript.classList.remove("modal-container-visible")
+            modalJavaScript.classList.add("modal-container-invisible")
+            document.body.classList.remove("scroll-invisible")
+            navbar.classList.remove("nav-invisible")
+            navigationButton.classList.remove("nav-invisible")
+        })
+        certificateJavaScript.addEventListener("click",function(){
+            document.body.classList.add("scroll-invisible")
+            navbar.classList.add("nav-invisible")
+            modalJavaScript.classList.remove("modal-container-invisible")
+            modalJavaScript.classList.add("modal-container-visible")
+            navigationButton.classList.add("nav-invisible")
+        })
+
+        var certificateNode= document.querySelector("#certificateNode")
+        var modalNode = document.querySelector("#certifNode")
+        modalNode.addEventListener("click",function(){
+            modalNode.classList.remove("modal-container-visible")
+            modalNode.classList.add("modal-container-invisible")
+            document.body.classList.remove("scroll-invisible")
+            navbar.classList.remove("nav-invisible")
+            navigationButton.classList.remove("nav-invisible")
+        })
+        certificateNode.addEventListener("click",function(){
+            document.body.classList.add("scroll-invisible")
+            navbar.classList.add("nav-invisible")
+            modalNode.classList.remove("modal-container-invisible")
+            modalNode.classList.add("modal-container-visible")
+            navigationButton.classList.add("nav-invisible")
+        })
+
+        var certificateGitGitHub= document.querySelector("#certificateGitGitHub")
+        var modalGitGitHub = document.querySelector("#certifGitGitHub")
+        modalGitGitHub.addEventListener("click",function(){
+            modalGitGitHub.classList.remove("modal-container-visible")
+            modalGitGitHub.classList.add("modal-container-invisible")
+            document.body.classList.remove("scroll-invisible")
+            navbar.classList.remove("nav-invisible")
+            navigationButton.classList.remove("nav-invisible")
+        })
+        certificateGitGitHub.addEventListener("click",function(){
+            document.body.classList.add("scroll-invisible")
+            navbar.classList.add("nav-invisible")
+            modalGitGitHub.classList.remove("modal-container-invisible")
+            modalGitGitHub.classList.add("modal-container-visible")
             navigationButton.classList.add("nav-invisible")
         })
     </script>
