@@ -25,6 +25,7 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/timeline.css" />
     <link rel="stylesheet" type="text/css" href="css/certificates.css" />
+    <link rel="stylesheet" type="text/css" href="css/carouselCertificates.css" />
     
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
@@ -40,24 +41,56 @@
 </head>
 
 <body id="fullpage" class="full">
+    <!-- Modales de certificados -->
     <div id="certifEnglish" class="modal-container-invisible">
-        <div>
-            <h1>Hola mundo English</h1>
-        </div>
+        <section class="certif-carousel">
+            <div class="certif-carousel__container">
+                <div class="certif-carousel-item">
+                    <img class="certif-carousel-item__img" src="certif/english/english-A1.jpg" alt="Imagen"/>
+                    <div class="certif-carousel-item__datails">
+                       <div style="align-self: flex-start; height: 85%;"> 
+                            <a target="_blank" href="certif/english/english-A1.jpg">
+                                <img style="cursor: pointer;" src="img/iconoVer.png" width="40px"/>
+                            </a>
+                       </div>
+                       <div style="display: flex; flex-direction: column;">
+                        <p class="certif-carousel-item__details--title">Inglés nivel A1</p>
+                        <p class="certif-carousel-item__details--subtitle">Certificado por ABA English</p>
+                       </div>
+                        
+                    </div>
+                </div>
+                <div class="certif-carousel-item">
+                    <img class="certif-carousel-item__img" src="certif/english/english-A2.jpg" alt="Imagen"/>
+                    <div class="certif-carousel-item__datails">
+                       <div style="align-self: flex-start; height: 85%;"> 
+                            <a target="_blank" href="certif/english/english-A2.jpg">
+                                <img style="cursor: pointer;" src="img/iconoVer.png" width="40px"/>
+                            </a>
+                       </div>
+                       <div style="display: flex; flex-direction: column;">
+                        <p class="certif-carousel-item__details--title">Inglés nivel A2</p>
+                        <p class="certif-carousel-item__details--subtitle">Certificado por ABA English</p>
+                       </div>
+                        
+                    </div>
+                </div>            
+            </div>
+        </section>
     </div>
     <div id="certifJavaScript" class="modal-container-invisible">
         <div>
-            <h1>Hola mundo javascript</h1>
+            <h1>En construcción</h1>
         </div>
     </div>
     <div id="certifNode" class="modal-container-invisible">
         <div>
-            <h1>Hola mundo node</h1>
+            <h1>En construcción</h1>
         </div>
     </div>
     <div id="certifGitGitHub" class="modal-container-invisible">
         <div>
-            <h1>Hola mundo github</h1>
+            <h1>En construcción</h1>
         </div>
     </div>
 
@@ -551,8 +584,8 @@
                 document.getElementById('navi-toggle').checked = false;
             }
 
-			var contactform = document.getElementById('contactForm');
-			contactform.setAttribute('action', 'https://formspree.io/' + 'rast' + '@' + 'rasttasher' + '.' + 'com');
+			// var contactform = document.getElementById('contactForm');
+			// contactform.setAttribute('action', 'https://formspree.io/' + 'rast' + '@' + 'rasttasher' + '.' + 'com');
 
 			var mobileLinks = document.querySelectorAll('.navigation__link');
 
@@ -564,27 +597,27 @@
 				mobileLinks[i].addEventListener("click", closeMenu);
 			}
 
-			smoothScroll.init();
-			$(function () {
-				$('[data-toggle="tooltip"]').tooltip()
-			});
+			// smoothScroll.init();
+			// $(function () {
+			// 	$('[data-toggle="tooltip"]').tooltip()
+			// });
 
-			var $head = $('#ha-header');
-			$('.ha-waypoint').each(function (i) {
-				var $el = $(this),
-					animClassDown = $el.data('animateDown'),
-					animClassUp = $el.data('animateUp');
+			// var $head = $('#ha-header');
+			// $('.ha-waypoint').each(function (i) {
+			// 	var $el = $(this),
+			// 		animClassDown = $el.data('animateDown'),
+			// 		animClassUp = $el.data('animateUp');
 
-				$el.waypoint(function (direction) {
-					if (direction === 'down' && animClassDown) {
-						$head.attr('class', 'ha-header ' + animClassDown);
-					} else if (direction === 'up' && animClassUp) {
-						$head.attr('class', 'ha-header ' + animClassUp);
-					}
-				}, {
-						offset: '100%'
-					});
-			});
+			// 	$el.waypoint(function (direction) {
+			// 		if (direction === 'down' && animClassDown) {
+			// 			$head.attr('class', 'ha-header ' + animClassDown);
+			// 		} else if (direction === 'up' && animClassUp) {
+			// 			$head.attr('class', 'ha-header ' + animClassUp);
+			// 		}
+			// 	}, {
+			// 			offset: '100%'
+			// 		});
+			// });
 		</script>
 
 		<script src="js/classie.js"></script>
@@ -641,12 +674,14 @@
         var navbar = document.querySelector(".ha-header-perspective>div")
         var navigationButton = document.querySelector("#navigationR")
         var modalEnglish = document.querySelector("#certifEnglish")
+        var carouselIndicator = document.querySelector(".carousel-indicators")
         modalEnglish.addEventListener("click",function(){
             modalEnglish.classList.remove("modal-container-visible")
             modalEnglish.classList.add("modal-container-invisible")
             document.body.classList.remove("scroll-invisible")
             navbar.classList.remove("nav-invisible")
             navigationButton.classList.remove("nav-invisible")
+            carouselIndicator.classList.remove("nav-invisible")
         })
         certificateEnglish.addEventListener("click",function(){
             document.body.classList.add("scroll-invisible")
@@ -654,6 +689,7 @@
             modalEnglish.classList.remove("modal-container-invisible")
             modalEnglish.classList.add("modal-container-visible")
             navigationButton.classList.add("nav-invisible")
+            carouselIndicator.classList.add("nav-invisible")
         })
 
         var certificateJavaScript= document.querySelector("#certificateJavaScript")
@@ -664,6 +700,7 @@
             document.body.classList.remove("scroll-invisible")
             navbar.classList.remove("nav-invisible")
             navigationButton.classList.remove("nav-invisible")
+            carouselIndicator.classList.remove("nav-invisible")
         })
         certificateJavaScript.addEventListener("click",function(){
             document.body.classList.add("scroll-invisible")
@@ -671,6 +708,7 @@
             modalJavaScript.classList.remove("modal-container-invisible")
             modalJavaScript.classList.add("modal-container-visible")
             navigationButton.classList.add("nav-invisible")
+            carouselIndicator.classList.add("nav-invisible")
         })
 
         var certificateNode= document.querySelector("#certificateNode")
@@ -681,6 +719,7 @@
             document.body.classList.remove("scroll-invisible")
             navbar.classList.remove("nav-invisible")
             navigationButton.classList.remove("nav-invisible")
+            carouselIndicator.classList.remove("nav-invisible")
         })
         certificateNode.addEventListener("click",function(){
             document.body.classList.add("scroll-invisible")
@@ -688,6 +727,7 @@
             modalNode.classList.remove("modal-container-invisible")
             modalNode.classList.add("modal-container-visible")
             navigationButton.classList.add("nav-invisible")
+            carouselIndicator.classList.add("nav-invisible")
         })
 
         var certificateGitGitHub= document.querySelector("#certificateGitGitHub")
@@ -698,6 +738,7 @@
             document.body.classList.remove("scroll-invisible")
             navbar.classList.remove("nav-invisible")
             navigationButton.classList.remove("nav-invisible")
+            carouselIndicator.classList.remove("nav-invisible")
         })
         certificateGitGitHub.addEventListener("click",function(){
             document.body.classList.add("scroll-invisible")
@@ -705,6 +746,7 @@
             modalGitGitHub.classList.remove("modal-container-invisible")
             modalGitGitHub.classList.add("modal-container-visible")
             navigationButton.classList.add("nav-invisible")
+            carouselIndicator.classList.add("nav-invisible")
         })
     </script>
     <script>

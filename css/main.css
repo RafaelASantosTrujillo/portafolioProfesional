@@ -1067,7 +1067,7 @@ rect{
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
-.container-certificates{
+/* .container-certificates{
         width: 100%;
         height: 670px;
         background-color: transparent;
@@ -1115,7 +1115,7 @@ rect{
     100% {
         background-position: 0 0;
     }
-}
+} */
 /*TERMINA CERTIFICADOS---------------------------------------------------*/
 
 /*INICIA FORMULARIO*/
@@ -1190,7 +1190,7 @@ rect{
         background-repeat: no-repeat;
         background-size: 350px;
     }
-    .container-certificates{
+    /* .container-certificates{
         width: 100%;
         height: 1050px;
         background-color: transparent;
@@ -1198,7 +1198,7 @@ rect{
         z-index: -2;
         overflow: hidden;
         transition: all 0.2s linear;
-}
+} */
     svg,rect{
         top:0;
         left:0;
