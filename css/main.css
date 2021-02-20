@@ -1544,3 +1544,18 @@ textarea:hover{
   ::-moz-selection { */
     /* background: #00ff7f; Gecko Browsers
   } */
+.button-close{
+    background-color: rgba(255, 255, 255, 0.856);
+    align-self: flex-start;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: solid 2px cadetblue;
+    cursor: pointer;
+    margin-top: 50px;
+    z-index: 5;
+}
